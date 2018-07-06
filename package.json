@@ -1,0 +1,13 @@
+{
+  "name": "foobar-material",
+  "version": "0.1.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "knacky_34",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^2.0.2"
+  }
+}
