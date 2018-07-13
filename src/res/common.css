@@ -30,5 +30,25 @@
 }
 
 body {
+  --mdc-theme-primary: #00897b;
+  --mdc-theme-primary-light: #4ebaaa;
+  --mdc-theme-primary-dark: #005b4f;
+  --mdc-theme-secondary: #546e7a;
+  --mdc-theme-secondary-light: #819ca9;
+  --mdc-theme-secondary-dark: #29434e;
+  --mdc-theme-on-secondary: #ffffff;
   margin: 0px;
+}
+
+.mdc-top-app-bar__title {
+  color: initial;
+}
+
+.mdc-slider__thumb-container {
+  height: initial !important;
+}
+
+.mdc-slider__thumb {
+  fill: var(--mdc-theme-secondary-dark) !important;
+  stroke: var(--mdc-theme-secondary-dark) !important;
 }

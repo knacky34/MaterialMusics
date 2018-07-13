@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Settings</title>
+    <link rel="stylesheet" href="res/material-components-web.min.css">
+    <link rel="stylesheet" href="res/common.css">
+    <link rel="stylesheet" href="settings.css">
+    <script src="res/material-components-web.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <nav class="mdc-drawer mdc-drawer--permanent mdc-typography" style="height: 500px; float: left; box-shadow: 5px 0 6px -5px rgba(0, 0, 0, 0.3);">
+      <div class="mdc-drawer__toolbar-spacer mdc-typography--headline6">Settings</div>
+      <div class="mdc-drawer__content">
+        <a id="btn_music-lib" class="mdc-list-item"><i class="material-icons mdc-list-item__graphic">folder</i>Music Library</a>
+        <a id="btn_playback" class="mdc-list-item"><i class="material-icons mdc-list-item__graphic">speaker</i>Playback</a>
+        <a id="btn_shell" class="mdc-list-item"><i class="material-icons mdc-list-item__graphic">developer_board</i>Shell Integration</a>
+      </div>
+    </nav>
+    <div id="content_music-lib" class="page-content mdc-typography">
+      <h2 class="title_bar">Music folders :</h2>
+      <ul id="list_musicFolders" class="mdc-list"></ul>
+      <button id="btn_addFolder" class="mdc-fab mdc-fab--mini mdc-ripple" style="margin-left: 16px;"><span class="mdc-fab__icon material-icons">add</span></button>
+    </div>
+    <div id="content_playback" class="page-content mdc-typography">
+
+    </div>
+    <div id="content_shell" class="page-content mdc-typography">
+
+    </div>
+    <div class="page-end-buttons">
+      <button id="btn_ok" class="mdc-button mdc-button--unelevated mdc-ripple">OK</button>
+      <button id="btn_cancel" class="mdc-button mdc-button--outlined mdc-ripple">Cancel</button>
+      <button id="btn_apply" class="mdc-button mdc-button--outlined mdc-ripple" disabled>Apply</button>
+    </div>
+
+    <aside id="dialog_addFolder" class="mdc-dialog" role="alertdialog">
+      <div class="mdc-dialog__surface">
+        <header class="mdc-dialog__header">
+          <h2 class="mdc-dialog__header__title">Add new music folder :</h2>
+        </header>
+        <section class="mdc-dialog__body">
+          <div id="field_addFolder" class="mdc-text-field" style="width: 567px; margin-right: 10px;">
+            <input id="field_input_addFolder" type="text" class="mdc-text-field__input" required>
+            <label class="mdc-floating-label" for="my-text-field">Enter folder path</label>
+            <div class="mdc-line-ripple"></div>
+          </div>
+          <button id="btn_openDialog" class="mdc-fab mdc-fab--mini mdc-ripple"><span class="mdc-fab__icon material-icons">open_in_new</span></button>
+        </section>
+        <footer class="mdc-dialog__footer">
+          <button id="btn_dialog_addFolder" type="button" class="mdc-button mdc-button--unelevated mdc-dialog__footer__button mdc-dialog__footer__button--accept" disabled>Add</button>
+          <button type="button" class="mdc-button mdc-button--outlined mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Cancel</button>
+        </footer>
+      </div>
+      <div class="mdc-dialog__backdrop"></div>
+    </aside>
+
+    <div class="mdc-snackbar">
+      <div class="mdc-snackbar__text"></div>
+      <div class="mdc-snackbar__action-wrapper">
+        <button type="button" class="mdc-snackbar__action-button"></button>
+      </div>
+    </div>
+
+    <script src="settings.js" charset="utf-8"></script>
+  </body>
+</html>

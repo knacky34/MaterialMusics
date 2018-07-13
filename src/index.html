@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Material Musics</title>
+    <link rel="stylesheet" href="res/material-components-web.min.css">
+    <link rel="stylesheet" href="res/common.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="res/material-components-web.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <header class="mdc-top-app-bar mdc-top-app-bar--fixed" style="position: static;">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <span class="mdc-top-app-bar__title">Material Musics</span>
+          <span class="material-icons" style="color: var(--mdc-theme-on-primary); font-size: 18px; margin: 2px 10px 0px 30px;">volume_up</span>
+          <div id="volume_slider" class="mdc-slider" tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" style="width: 40%;">
+            <div class="mdc-slider__track-container" style="background-color: rgba(0, 0, 0, 0.10);"><div class="mdc-slider__track"></div></div>
+            <div class="mdc-slider__thumb-container">
+              <svg class="mdc-slider__thumb" width="21" height="21"><circle cx="10.5" cy="10.5" r="7.875"></circle></svg>
+              <div class="mdc-slider__focus-ring"></div>
+            </div>
+          </div>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+          <button id="btn_settings" class="material-icons mdc-top-app-bar__action-item mdc-ripple" data-mdc-ripple-is-unbounded>settings</button>
+        </section>
+      </div>
+    </header>
+    <div id="player_progress" class="mdc-slider" tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" style="transform: translateY(-24px);">
+      <div class="mdc-slider__track-container" style="height: 4px; background-color: #dddddd; box-shadow: 0 4px 20px 0px #808080;"><div class="mdc-slider__track"></div></div>
+      <div class="mdc-slider__thumb-container">
+        <svg class="mdc-slider__thumb" width="21" height="21"><circle cx="10.5" cy="10.5" r="7.875"></circle></svg>
+        <div class="mdc-slider__focus-ring"></div>
+      </div>
+    </div>
+
+    <script src="index.js" charset="utf-8"></script>
+  </body>
+</html>

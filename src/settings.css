@@ -1,0 +1,30 @@
+body {
+  --mdc-theme-on-primary: #ffffff;
+}
+
+.page-content {
+  height: 500px;
+  width: 460px;
+  display: none;
+  float: left;
+}
+
+.page-end-buttons {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.title_bar {
+  text-align: center;
+  margin: 0;
+  padding: 18px 0px 17px 0px;
+}
+
+.mdc-list-item {
+  transition: height 0.3s;
+}
+
+.mdc-text-field--focused:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid) .mdc-floating-label {
+  color: var(--mdc-theme-primary);
+}

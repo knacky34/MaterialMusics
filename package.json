@@ -1,13 +1,21 @@
 {
-  "name": "foobar-material",
+  "name": "MaterialMusics",
   "version": "0.1.0",
-  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/knacky34/MaterialMusics.git"
+  },
+  "main": "src/main.js",
   "scripts": {
     "start": "electron ."
   },
   "author": "knacky_34",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "electron": "^2.0.2"
+    "electron": "^2.0.4"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "musicmetadata": "^2.0.5"
   }
 }
