@@ -2,9 +2,12 @@ const {ipcRenderer} = require('electron');
 
 var dialog_addFolder;
 var snackbar;
+var select_outDevive;
+
 var jsonObject;
 var folders = [];
-var error_folderAdd = {
+
+const error_folderAdd = {
   message: 'The path is invalid',
   actionText: 'Retry',
   actionHandler: () => {
@@ -19,6 +22,7 @@ function init() {
   }
 
   snackbar = mdc.snackbar.MDCSnackbar.attachTo(document.querySelector('.mdc-snackbar'));
+  select_outDevive = mdc.select.MDCSelect.attachTo(document.getElementById('select_outDevive'));
 
 
   document.getElementById('btn_ok').onclick = () => {
@@ -107,16 +111,18 @@ ipcRenderer.on('load_settings', (event, json) => {
     addFolderListEntry(json.music_folders[i], i);
   }
 
-/*
-  var elements = document.querySelectorAll('#btn_deleteFolder');
-  for (var i = 0, element; element = elements[i]; i++) {
-    element.onclick = (event) => {
-      var li = event.target.parentElement;
-      li.style.height = "0";
-      folders.splice(folders.indexOf(li.childNodes[0].innerText), 1);
-      setTimeout(() => {li.remove();}, 500);
-    }
-  }*/
+  var select = document.getElementById('select_content_outDevive');
+  while (select.firstChild) {
+    select.removeChild(select.firstChild);
+  }
+  navigator.mediaDevices.enumerateDevices().then(function(devices) {
+    devices.forEach(function(device) {
+      if (device.kind == 'audiooutput' && device.deviceId != 'communications') {
+        select.innerHTML += '<option value="' + device.deviceId + '">' + device.label + '</option>'
+      }
+    });
+  });
+  setTimeout(() => {select_outDevive.value = json.output_device}, 10);
 });
 
 function deleteFolder(element) {

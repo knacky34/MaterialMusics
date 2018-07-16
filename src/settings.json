@@ -1,1 +1,22 @@
-{"music_folders":["D:\\Music\\","C:\\user\\gwjan\\musics"],"output_device":"main","preamp":{"with_rg":0,"without_rg":0},"replay_gain":{"mode":1,"source":1},"shell":{"check_association_startup":true,"enqueue_default_action":true,"send_file_to_playlist":{"enable":true,"playlist":"default"},"set_default_player":true},"total_time_played":0}
+{
+  "music_folders": ["D:\\Music\\"],
+  "output_device": "5dd77f355b17d7e34a8422d19bc374513608cc8de6d9b88be3b750c02c6eac99",
+  "preamp": {
+    "with_rg": 0,
+    "without_rg": 0
+  },
+  "replay_gain": {
+    "mode": 1,
+    "source": 1
+  },
+  "shell": {
+    "check_association_startup": true,
+    "enqueue_default_action": true,
+    "send_file_to_playlist": {
+      "enable": true,
+      "playlist": "default"
+    },
+    "set_default_player": true
+  },
+  "total_time_played": 0
+}

@@ -1,11 +1,10 @@
 # MaterialMusics
-A material design desktop music player for Windows, MacOS and Linux
-
-Work in progress ...
+A material design desktop music player for Windows, MacOS and Linux.
+Material Musics is inspired by [foobar2000](https://www.foobar2000.org/)
 
 
 ## Run
-1) npm install --dev
+1) npm install
 2) npm start
 
 
